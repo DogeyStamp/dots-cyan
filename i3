@@ -112,15 +112,15 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "M1"
-set $ws2 "S2"
-set $ws3 "T3"
-set $ws4 "T4"
-set $ws5 "E5"
-set $ws6 "E6"
-set $ws7 "E7"
-set $ws8 "E8"
-set $ws9 "E9"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
@@ -183,7 +183,7 @@ bindsym $mod+r mode "resize"
 
 exec xrandr --output eDP1 --auto --right-of DP1
 exec ~/.config/polybar/launch.sh
-picom --experimental-backends --backend glx
+exec picom --experimental-backends --backend glx
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
