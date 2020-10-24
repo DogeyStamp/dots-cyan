@@ -11,6 +11,7 @@
 
 set $mod Mod1
 exec feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
+exec QT_QPA_PLATFORMTHEME=qt5ct
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -61,20 +62,6 @@ client.urgent           #2F343A #000000 #FF0000 #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #000000
-
-bar {
-  colors {
-    background #000000
-    statusline #FFFFFF
-    separator  #666666
-
-    focused_workspace  #4C7899 #285577 #FFFFFF
-    active_workspace   #333333 #222222 #FFFFFF
-    inactive_workspace #333333 #222222 #888888
-    urgent_workspace   #2F343A #900000 #FFFFFF
-    binding_mode       #2F343A #900000 #FFFFFF
-  }
-}
 
 bindsym $mod+d exec "dmenu_run -nf '#00BBBB' -nb '#000000' -sb '#3B3B3B' -sf '#00FFFF' -fn 'monospace-10' -p 'dmenu >'"
 
