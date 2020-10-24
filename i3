@@ -37,10 +37,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.cmus /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause" 
-bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.cmus /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next" 
-bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.cmus /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.cmus /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+bindsym XF86AudioPlay exec "playerctl play-pause" 
+bindsym XF86AudioNext exec "playerctl next" 
+bindsym XF86AudioPrev exec "playerctl previous"
+bindsym XF86AudioStop exec "playerctl stop"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -183,7 +183,7 @@ bindsym $mod+r mode "resize"
 
 exec xrandr --output eDP1 --auto --right-of DP1
 exec ~/.config/polybar/launch.sh
-exec picom --experimental-backends --backend glx
+#exec picom --experimental-backends --backend glx
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
