@@ -154,6 +154,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+Control+l exec i3lock -c 000000 --ringcolor=005555 --insidevercolor=00000000 --insidewrongcolor=00000000 --keyhlcolor=00ffff --bshlcolor=00cccc --wrongtext="" --noinputtext="" --veriftext="" && systemctl suspend
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
