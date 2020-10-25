@@ -196,6 +196,7 @@ bindsym $mod+r mode "resize"
 
 exec xrandr --output eDP1 --auto --right-of DP1
 exec ~/.config/polybar/launch.sh
+exec dunst
 #exec picom --experimental-backends --backend glx
 
 # Start i3bar to display a workspace bar (plus the system information i3status
