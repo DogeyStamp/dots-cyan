@@ -42,13 +42,19 @@ bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next" 
 bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86AudioStop exec "playerctl stop"
+bindsym --release Print exec "scrot -sf '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+#start the browser
 bindsym $mod+Shift+b exec firefox
 
 # kill focused window
