@@ -12,6 +12,9 @@
 set $mod Mod1
 exec feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
+exec setxkbmap -layout us,ca -variant multi
+exec setxkbmap -option 'grp:win_space_toggle'
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
