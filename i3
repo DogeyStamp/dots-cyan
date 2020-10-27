@@ -12,8 +12,8 @@
 set $mod Mod1
 exec feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
-exec setxkbmap -layout us,ca -variant multi
-exec setxkbmap -option 'grp:win_space_toggle'
+exec "setxkbmap -layout us,ca -variant multi"
+exec "setxkbmap -option 'grp:win_space_toggle'"
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -174,7 +174,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Control+l exec i3lock -c 000000 --ringcolor=005555 --insidevercolor=00000000 --insidewrongcolor=00000000 --keyhlcolor=00ffff --bshlcolor=00cccc --wrongtext="" --noinputtext="" --veriftext="" && systemctl suspend
+bindsym $mod+Control+l lock && systemctl suspend
+bindsym $mod+Control+s lock && systemctl hibernate
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
