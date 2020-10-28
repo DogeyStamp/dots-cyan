@@ -72,7 +72,8 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #000000
 
-bindsym $mod+d exec "dmenu_run -nf '#00BBBB' -nb '#000000' -sb '#3B3B3B' -sf '#00FFFF' -fn 'monospace-10' -p 'dmenu >'"
+#bindsym $mod+d exec "dmenu_run -nf '#00BBBB' -nb '#000000' -sb '#3B3B3B' -sf '#00FFFF' -fn 'monospace-10' -p 'dmenu >'"
+bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
 
 # start dmenu (a program launcher)
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -174,8 +175,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-msg exit"
 
-bindsym $mod+Control+l lock && systemctl suspend
-bindsym $mod+Control+s lock && systemctl hibernate
+bindsym $mod+Control+l exec /usr/bin/lock && systemctl suspend
+bindsym $mod+Control+s exec /usr/bin/lock && systemctl hibernate
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
