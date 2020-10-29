@@ -148,8 +148,8 @@ set $ws10 "10"
 set $Lmon DP1
 set $Rmon eDP1
 
-workspace $ws1 $Lmon
-workspace $ws2 $Rmon
+workspace $ws1 output $Lmon
+workspace $ws2 output $Rmon
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
