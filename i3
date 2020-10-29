@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
 exec feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
 exec "setxkbmap -layout us,ca -variant multi"
@@ -144,6 +145,12 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+set $Lmon DP1
+set $Rmon eDP1
+
+workspace $ws1 $Lmon
+workspace $ws2 $Rmon
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -205,7 +212,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec xrandr --output eDP1 --auto --right-of DP1
+#exec xrandr --output eDP1 --auto --right-of DP1
 exec ~/.config/polybar/launch.sh
 exec dunst
 #exec picom --experimental-backends --backend glx
