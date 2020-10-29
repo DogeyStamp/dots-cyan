@@ -150,6 +150,14 @@ set $Rmon eDP1
 
 workspace $ws1 output $Lmon
 workspace $ws2 output $Rmon
+workspace $ws3 output $Lmon
+workspace $ws4 output $Rmon
+workspace $ws5 output $Lmon
+workspace $ws6 output $Rmon
+workspace $ws7 output $Lmon
+workspace $ws8 output $Rmon
+workspace $ws9 output $Lmon
+workspace $ws10 output $Rmon
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
