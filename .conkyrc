@@ -55,8 +55,9 @@ ${time %A}
 ${voffset -80}
 ${font VT323:weight=Regular:size=40}${color0}\
 ${time %d %B, %Y}\
-${voffset -25}
-${font VT323:weight=Regular:size=15}${color0}\
+${voffset -10}
+${font Terminus:weight=Regular:size=15}${color0}\
+${time %s.%S}
 \
 \
 \
