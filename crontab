@@ -1,0 +1,1 @@
+*/5 * * * * gcalcli --nocolor agenda "`date`" > /tmp/gcalcli_agenda.txt
