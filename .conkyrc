@@ -35,7 +35,7 @@ default_color='00FFFF',
 
 color0='00FFFF',
 color1='00AAAA',
-
+color2='00CCCC',
 
 
 }
@@ -55,9 +55,9 @@ ${time %A}
 ${voffset -80}
 ${font VT323:weight=Regular:size=40}${color0}\
 ${time %d %B, %Y}\
-${voffset -20}
-${font VT323:weight=Regular:size=20}${color0}\
-${execi 60 head -2 /tmp/gcalcli_agenda.txt | tail -1 | sed "s/          /:/g"}\
+${voffset -30}
+${font VT323:weight=Regular:size=17}${color2}\
+${execi 60 gcalcli agenda --nocolor | sed "s/ \+/ /g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | sed 's/ *$//g' | head}\
 ${voffset 20}
 ${font Terminus:weight=Regular:size=10}${color1}\
 ${time %s.%S.%Z}
