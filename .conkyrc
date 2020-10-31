@@ -34,7 +34,7 @@ override_utf8_locale=true,
 default_color='00FFFF',
 
 color0='00FFFF',
-color1='00FFFF',
+color1='00AAAA',
 
 
 
@@ -49,15 +49,19 @@ conky.text = [[
 \
 ${font VT323:weight=Regular:size=150}${color0}\
 ${time %H:%M}\
-${voffset -80}
+${voffset -100}
 ${font VT323:weight=Regular:size=50}${color0}\
 ${time %A}
 ${voffset -80}
 ${font VT323:weight=Regular:size=40}${color0}\
 ${time %d %B, %Y}\
-${voffset -10}
-${font Terminus:weight=Regular:size=15}${color0}\
+${voffset -20}
+${font VT323:weight=Regular:size=20}${color0}\
+${execi 60 head -2 /tmp/gcalcli_agenda.txt | tail -1 | sed "s/          /:/g"}\
+${voffset 20}
+${font Terminus:weight=Regular:size=10}${color1}\
 ${time %s.%S.%Z}
+
 \
 \
 \
