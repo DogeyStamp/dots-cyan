@@ -51,8 +51,14 @@ bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86AudioStop exec "playerctl stop"
 bindsym --release Print exec "scrot -sf '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"
+#Backlight controls
 bindsym $mod+KP_Add exec xbacklight -inc 5
 bindsym $mod+KP_Subtract exec xbacklight -dec 5
+#Audio output controls
+bindsym $mod+F1 exec /home/dogeystamp/Scripts/set_audio 0
+bindsym $mod+F2 exec /home/dogeystamp/Scripts/set_audio 3
+bindsym $mod+F3 exec /home/dogeystamp/Scripts/set_audio 4
+bindsym $mod+F4 exec /home/dogeystamp/Scripts/set_audio 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
