@@ -10,10 +10,10 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
+exec_always "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
 exec xsetroot -solid "#000000"
 exec conky
-exec feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
+exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
 exec "setxkbmap -layout us,ca -variant multi"
 exec "setxkbmap -option 'grp:win_space_toggle'"
@@ -233,7 +233,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #exec xrandr --output eDP1 --auto --right-of DP1
-exec ~/.config/polybar/launch.sh
+exec_always ~/.config/polybar/launch.sh
 exec dunst
 #exec picom --experimental-backends --backend glx
 
