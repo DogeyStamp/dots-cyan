@@ -51,6 +51,8 @@ bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86AudioStop exec "playerctl stop"
 bindsym --release Print exec "scrot -sf '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"
+#Do not disturb
+bindsym Mod4+p exec "notify-send Dunst `dunstctl is-paused` && sleep 0 && dunstctl set-paused toggle"
 #Backlight controls
 bindsym $mod+KP_Add exec xbacklight -inc 1
 bindsym $mod+KP_Subtract exec xbacklight -dec 1
@@ -67,6 +69,11 @@ floating_modifier $mod
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
