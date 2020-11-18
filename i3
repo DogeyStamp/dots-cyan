@@ -57,10 +57,10 @@ bindsym Mod4+p exec "notify-send Dunst `dunstctl is-paused` && sleep 0 && dunstc
 bindsym $mod+KP_Add exec xbacklight -inc 1
 bindsym $mod+KP_Subtract exec xbacklight -dec 1
 #Audio output controls
-bindsym $mod+F1 exec /home/dogeystamp/Scripts/set_audio 0
-bindsym $mod+F2 exec /home/dogeystamp/Scripts/set_audio 3
-bindsym $mod+F3 exec /home/dogeystamp/Scripts/set_audio 4
-bindsym $mod+F4 exec /home/dogeystamp/Scripts/set_audio 5
+bindsym $mod+F5 exec /home/dogeystamp/Scripts/set_audio 0
+bindsym $mod+F6 exec /home/dogeystamp/Scripts/set_audio 3
+bindsym $mod+F7 exec /home/dogeystamp/Scripts/set_audio 4
+bindsym $mod+F8 exec /home/dogeystamp/Scripts/set_audio 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
