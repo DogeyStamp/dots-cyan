@@ -61,6 +61,7 @@ bindsym $mod+F5 exec /home/dogeystamp/Scripts/set_audio 0
 bindsym $mod+F6 exec /home/dogeystamp/Scripts/set_audio 3
 bindsym $mod+F7 exec /home/dogeystamp/Scripts/set_audio 4
 bindsym $mod+F8 exec /home/dogeystamp/Scripts/set_audio 5
+bindsym $mod+Shift+p exec passmenu
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
