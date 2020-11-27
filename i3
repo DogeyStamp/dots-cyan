@@ -13,9 +13,11 @@ set $mod Mod1
 exec_always "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
 exec xsetroot -solid "#000000"
 exec conky
+exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
-exec_always "setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle'"
-exec "setxkbmap -option caps:swapescape"
+exec_always "setxkbmap -layout us,ca -variant multi"
+exec_always "setxkbmap -option 'grp:win_space_toggle'"
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -240,8 +242,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png
 
 #exec xrandr --output eDP1 --auto --right-of DP1
 exec_always ~/.config/polybar/launch.sh
