@@ -63,8 +63,6 @@ bindsym $mod+F7 exec /home/dogeystamp/Scripts/set_audio 4
 bindsym $mod+F8 exec /home/dogeystamp/Scripts/set_audio 5
 bindsym $mod+Shift+p exec passmenu
 bindsym $mod+m exec konsole -e mutt
-bindsym $mod+b exec "python3 ~/Scripts/namer.py | xsel -ib"
-bindsym $mod+y exec "~/Scripts/devowel.sh"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
