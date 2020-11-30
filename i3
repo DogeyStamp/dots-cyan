@@ -15,9 +15,7 @@ exec xsetroot -solid "#000000"
 exec conky
 exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
-exec_always "setxkbmap -layout us,ca -variant multi"
-exec_always "setxkbmap -option 'grp:win_space_toggle'"
-
+setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle, caps:swapescape'
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -64,6 +62,7 @@ bindsym $mod+F8 exec /home/dogeystamp/Scripts/set_audio 5
 bindsym $mod+Shift+p exec passmenu
 bindsym $mod+m exec i3-sensible-terminal -e mutt
 bindsym $mod+b exec python3 /home/dogeystamp/Scripts/namer.py | xsel -ib
+bindsym $mod+z exec zathura
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
