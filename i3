@@ -15,7 +15,7 @@ exec xsetroot -solid "#000000"
 exec conky
 exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
-setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle, caps:swapescape'
+exec setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle, caps:swapescape'
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
