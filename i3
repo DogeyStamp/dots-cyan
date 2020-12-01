@@ -10,12 +10,13 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+exec_always "xrandr --auto --output DP1 --off"
 exec_always "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
 exec xsetroot -solid "#000000"
 exec conky
 exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
 exec QT_QPA_PLATFORMTHEME=qt5ct
-exec setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle, caps:swapescape'
+exec_always setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle, caps:swapescape'
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
