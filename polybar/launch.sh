@@ -13,8 +13,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch bar1 and bar2
 
 polybar top-main -c ~/.config/polybar/config-top.ini &
-polybar bottom-main -c ~/.config/polybar/config-bottom.ini &
+#polybar bottom-main -c ~/.config/polybar/config-bottom.ini &
 if [[ $(xrandr | grep "DP1 connected" | grep -Eiv "eDP1") ]]; then
-    polybar bottom-ext -c ~/.config/polybar/config-bottom.ini &
+#   polybar bottom-ext -c ~/.config/polybar/config-bottom.ini &
     polybar top-ext -c ~/.config/polybar/config-top.ini &
 fi
