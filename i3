@@ -81,7 +81,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Return exec i3-sensible-terminal
 
 #start the browser
-bindsym $mod+Shift+b exec firefox
+bindsym $mod+Shift+b exec qutebrowser
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -246,7 +246,7 @@ bindsym $mod+r mode "resize"
 exec_always ~/.config/polybar/launch.sh
 exec dunst
 exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 
-#exec picom --experimental-backends --backend glx
+exec picom --experimental-backends --backend glx
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
