@@ -10,8 +10,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 for_window [class=".*"] border pixel 2
-gaps outer 30
-gaps inner 15
+gaps outer -10
+gaps inner 30
+smart_gaps on
 
 set $mod Mod1
 exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
