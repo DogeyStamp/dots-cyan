@@ -47,7 +47,7 @@ visualizer_color = 15, 52, 51, 50, 49, 48
 #visualizer_type = "wave" (spectrum/wave)
 visualizer_type = "wave_filled" (spectrum/wave)
 visualizer_in_stereo = "yes"
-visualizer_look = "+|"
+visualizer_look = "●▮"
 
 
 ## Navigation ##
