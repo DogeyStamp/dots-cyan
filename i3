@@ -86,7 +86,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Return exec i3-sensible-terminal
 
 #start the browser
-bindsym $mod+Shift+b exec brave
+bindsym $mod+Shift+b exec chromium
 
 # kill focused window
 bindsym $mod+Shift+q kill
