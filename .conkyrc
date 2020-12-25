@@ -54,8 +54,7 @@ ${font VT323:weight=Regular:size=50}${color0}\
 ${time %A}
 ${voffset -80}
 ${font VT323:weight=Regular:size=40}${color0}\
-${time %d %B, %Y}\
-${voffset -30}
+${time %d %B, %Y}
 ${font Terminus:weight=Regular:size=10}${color2}\
 ${execi 60 calcurse -Q --days 2}\
 ${voffset 20}
