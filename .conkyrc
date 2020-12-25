@@ -10,17 +10,17 @@ draw_shades=false,
 draw_outline=false,
 draw_borders=false,
 
-gap_x=50,
-gap_y=50,
+gap_x=0,
+gap_y=0,
 
-alignment="top_left",
+alignment="bottom_middle",
 
-minimum_height=400,
+minimum_height=300,
 minimum_width=0,
 
 own_window=true,
 own_window_type="override",
-own_window_class="Conky",
+own_window_class="conky",
 
 own_window_argb_visual=true,
 own_window_argb_value=0,
@@ -49,24 +49,11 @@ conky.text = [[
 \
 ${font VT323:weight=Regular:size=150}${color0}\
 ${time %H:%M}\
-${voffset -100}
-${font VT323:weight=Regular:size=50}${color0}\
-${time %A}
-${voffset -80}
-${font VT323:weight=Regular:size=40}${color0}\
+${voffset -150}
+${font VT323:weight=Regular:size=30}${color0}\
+${time %A, }\
+${font VT323:weight=Regular:size=20}${color0}\
 ${time %d %B, %Y}
-${font Terminus:weight=Regular:size=10}${color2}\
+${font Terminus:weight=Regular:size=8}${color2}\
 ${execi 60 calcurse -Q --days 2}\
-${voffset 20}
-${font Terminus:weight=Regular:size=8}${color1}\
-${time %s.%S//%Z}
-
-\
-\
-\
-\
-\
-\
-\
-\
 ]]
