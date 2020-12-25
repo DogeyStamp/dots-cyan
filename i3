@@ -15,9 +15,9 @@ gaps inner 30
 smart_gaps on
 
 set $mod Mod4
-exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
-bindsym $mod+u exec "xrandr --auto --output DP1 --off"
-bindsym $mod+i exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
+exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
+bindsym $mod+u exec "xrandr --auto --output DP2 --off"
+bindsym $mod+i exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
 exec xsetroot -solid "#000000"
 exec conky
 exec QT_QPA_PLATFORMTHEME=qt5ct
@@ -50,10 +50,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioPlay exec "playerctl play-pause" 
-bindsym XF86AudioNext exec "playerctl next" 
-bindsym XF86AudioPrev exec "playerctl previous"
-bindsym XF86AudioStop exec "playerctl stop"
+bindsym XF86AudioPlay exec "mpc toggle" 
+bindsym XF86AudioNext exec "mpc next" 
+bindsym XF86AudioPrev exec "mpc prev"
+bindsym XF86AudioStop exec "mpc stop"
 bindsym --release Print exec "scrot -sf '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"
 #Do not disturb
 bindsym Mod4+p exec "notify-send Dunst `dunstctl is-paused` && sleep 0 && dunstctl set-paused toggle"
@@ -172,7 +172,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $Lmon DP1
+set $Lmon DP2
 set $Rmon eDP1
 
 workspace $ws1 output $Lmon
@@ -247,7 +247,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#exec xrandr --output eDP1 --auto --right-of DP1
+#exec xrandr --output eDP1 --auto --right-of DP2
 exec_always ~/.config/polybar/launch.sh
 exec dunst
 exec_always feh --bg-scale /home/dogeystamp/Pictures/dogeyglowc.png 

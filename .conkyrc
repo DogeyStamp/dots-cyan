@@ -57,6 +57,7 @@ ${font VT323:weight=Regular:size=40}${color0}\
 ${time %d %B, %Y}\
 ${voffset -30}
 ${font Terminus:weight=Regular:size=10}${color2}\
+${execi 60 calcurse -Q 2}\
 ${voffset 20}
 ${font Terminus:weight=Regular:size=8}${color1}\
 ${time %s.%S//%Z}
