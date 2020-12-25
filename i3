@@ -20,6 +20,7 @@ bindsym $mod+u exec "xrandr --auto --output DP2 --off"
 bindsym $mod+i exec "xrandr --output eDP1 --mode 1920x1080 --pos 1920x297 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off"
 exec xsetroot -solid "#000000"
 exec conky
+exec conky
 exec QT_QPA_PLATFORMTHEME=qt5ct
 exec_always setxkbmap -layout us,ca -variant multi -option 'grp:win_space_toggle, caps:swapescape'
 
